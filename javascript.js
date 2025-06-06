@@ -23,13 +23,13 @@ funksjonen)
 
 // Skriv koden for oppgave 1 her
 const etTall = (tall) => {
-  if (tall % 2 === 0) {
+  if (tall % 2 === 0) {    
     return "Partall";
   } else {
     return "Oddetall";
   }
 };
-
+/* Her deler vi tallet på to for å se om vi får rest. Om resten er 0 så vil det si at vi har et partall. Får vi rest så er det et oddetall.
 /******************************************************************************
 2.
 
@@ -46,7 +46,7 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 const storTekst = (tekst) => {
   return tekst.toUpperCase() + "!";
 };
-
+/* Her bruker vi .toUpperCase() på teksten fordi det vil gjøre skriften stor, og + "!" gjør at den legger på et utropstegn på slutten.
 /******************************************************************************
 3.
 
@@ -91,6 +91,7 @@ const enHilsen = (navn, time) => {
     return `God kveld ${navn}`;
   }
 };
+/* Her har vi definert hva hilsen skal si etter hvilken time man skriver inn. if = hvis, så hvis man skriver inn 3 så vil man få "God natt "navnet ditt"" tilbake."
 /******************************************************************************
 4.
 
@@ -110,7 +111,7 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 const fjernForsteOgSiste = (array) => {
   return Array.slice(1, array.length - 1);
 };
-
+/* .slice(start, ending) kopierer arrayet, (1 betyr at den skal starte på item 2 i rekken siden indexen begynner med 0, array.lenght -1) betyr at den skal stoppe før siste item.
 /******************************************************************************
 5.
 
@@ -136,7 +137,7 @@ cons nyTekst = (tekst) => {
     const ny = trimmet.replace("vanskelig", "gøy");
     return ny;
 };
-
+/* Her vil .trim() ta vekk spacen på starten og slutten. .replace("eksisterende ord", "nytt ord") vil endre ordet til det vi ønsker.
 /******************************************************************************
 6.
 
@@ -169,6 +170,9 @@ if (index !== -1) {
 3: items.splice(0, 2, "Markeringspenn");
 4: const resultat = items.join(" | ");
 
+/* Vi skriver inn items.shift() for å fjerne det første itemet (bok). indexOf() leter etter itemet vi ønsker å finne, (index !== -1) er for å sjekke at vi faktisk fant itemet, deretter skriver vi items[index] = "Linjal"; for å sette inn et annet item.
+Splice("hvor i arrayet vi vil starte"(0 fordi vi vil starte fra begynnelsen), "Hvor mange elementer som skal slettes(2)", "hva jeg vil legge inn der istedenfor");. 
+join() er en array- metode som slår sammen alle elementene i et array til en string, "|" er det vi har spesifisert skal stå mellom alle itemsene.
 /******************************************************************************
 7.
 
